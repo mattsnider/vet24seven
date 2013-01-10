@@ -1,6 +1,7 @@
 {% extends 'django_shared/base.html' %}
-{% block title %}Vet 24 Seven{% endblock %}
+{% block title %}Vet 24 seven{% endblock %}
 {% block keywords %}{{ keywords|default:'vet,veterinarian,24,twenty,four,twentyfour,twenty-four,seven,7,mobile,pets,dogs,cat' }}{% endblock %}
 {% block extra_styles %}
-    <link href="{{ STATIC_URL }}css/home.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/home.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/libs/grid_960/960_12_col.css" />
 {% endblock %}

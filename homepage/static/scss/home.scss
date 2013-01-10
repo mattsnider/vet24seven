@@ -1,0 +1,124 @@
+$color-red: #93041D;
+$color-red-dark: #97051E;
+$color-pink: #AA3246;
+$color-blue: #1F3AB0;
+$color-blue-light: #1640E5;
+$color-blue-lightest: #3D6BB9;
+
+header {
+  height: 150px;
+}
+
+.logo {
+  float: left;
+  height: 140px;
+}
+
+.h_byline {
+  background-color: $color-blue;
+  font-size: 1.25em;
+  font-weight: lighter;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.h_headline {
+  float: left;
+  font-size: 1.5em;
+  margin: 50px 0 0 25px;
+}
+
+.link-back {
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  background-color: $color-red;
+  border-radius: 10px;
+  display: block;
+  float: right;
+  margin-right: 60px;
+  margin-top: 45px;
+  padding: 10px 60px;
+  text-decoration: none;
+}
+
+.bg_box {
+  height: 300px;
+  position: relative;
+  width: 300px;
+
+  .bg_label {
+    background-color: $color-pink;
+    bottom: 0;
+    color: white;
+    padding: 10px 35px;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.buddy {
+  background: transparent url("../image/Buddy_the_Dog.jpeg") 0 0 no-repeat;
+}
+
+.labradoodle {
+  background: transparent url("../image/Labradoodle.png") 145px 120px no-repeat;
+}
+
+.movie {
+  h3 {
+    margin: 10px 0 0;
+  }
+
+  p {
+    margin: 0 0 30px 0;
+  }
+
+  iframe {
+    margin-left: 15px;
+  }
+}
+
+.who_we_are {
+  -webkit-border-bottom-right-radius: 40px;
+  -moz-border-radius-bottomright: 40px;
+  background-color: #FEFE59;
+  border-bottom-right-radius: 40px;
+  margin-top: -2px;
+  padding-bottom: 8px;
+  text-align: right;
+  width: 185px;
+
+  h3 {
+    font-size: 11pt;
+    margin: 0;
+  }
+
+  p {
+    font-size: 11pt;
+    margin-top: 0;
+  }
+
+  .inner {
+    -webkit-border-bottom-right-radius: 40px;
+    -moz-border-radius-bottomright: 40px;
+    background-color: #FEE358;
+    border-bottom-right-radius: 40px;
+    padding: 5px;
+    width: 160px;
+  }
+}
+
+.text-blue {
+  color: $color-blue-lightest;
+}
+
+.text-red {
+  color: $color-red;
+}
+
+.text-white {
+  color: white;
+}

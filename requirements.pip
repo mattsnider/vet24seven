@@ -1,6 +1,6 @@
 Django
 Fabric
-memcached
+python-memcached
 psycopg2
 south
 

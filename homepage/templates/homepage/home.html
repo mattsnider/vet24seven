@@ -1,11 +1,37 @@
 {% extends 'base.html' %}
 
-{% block header %}{% endblock %}
+{% block header %}
+    <img alt="vet24seven logo" class="logo" src="{{ STATIC_URL }}image/V24S_logo.jpeg"/>
+    <h1 class="h_headline text-red">Bringing Vets to your Pets</h1>
+    <a class="link-back text-white" href="#">about the app</a>
+{% endblock %}
 
 {% block footer %}
 
 {% endblock %}
 
 {% block main_content %}
-Hello World
+<h2 class="h_byline text-white">Buddy rescued by Vet24seven</h2>
+<div class="grid_4">
+    <div class="bg_box labradoodle">
+        <div class="who_we_are">
+            <div class="inner">
+                <h3 class="text-blue">Who are we?</h3>
+                <p>We love our pets and we love technology.</p>
+                <h3>Vet24Seven</h3>
+                <p>revolutionized pet healthcare by bringing vets to your pets via your mobile device.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid_4">
+    <div class="bg_box buddy">
+        <div class="bg_label">Buddy</div>
+    </div>
+</div>
+<div class="grid_4 movie">
+    <h3 class="text-red">Hot News</h3>
+    <p>RESCUED!! Dog abandoned and living in a field for 5 months (watch below)</p>
+    <iframe width="250" height="150" src="http://www.youtube.com/embed/6lVgjUNxVik" frameborder="0" allowfullscreen></iframe>
+</div>
 {% endblock %}
