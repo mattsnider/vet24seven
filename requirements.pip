@@ -1,0 +1,7 @@
+Django
+Fabric
+memcached
+psycopg2
+south
+
+git+https://github.com/mattsnider/django-shared.git
