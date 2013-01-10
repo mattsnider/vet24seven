@@ -13,25 +13,60 @@
 {% block main_content %}
 <h2 class="h_byline text-white">Buddy rescued by Vet24seven</h2>
 <div class="grid_4">
-    <div class="bg_box labradoodle">
+    <div class="bg_box labradoodle left_margin_20">
         <div class="who_we_are">
             <div class="inner">
                 <h3 class="text-blue">Who are we?</h3>
                 <p>We love our pets and we love technology.</p>
-                <h3>Vet24Seven</h3>
-                <p>revolutionized pet healthcare by bringing vets to your pets via your mobile device.</p>
+                <h3>Vet24seven</h3>
+                <p>revolutionizes pet healthcare by bringing vets to your pets via your mobile device.</p>
             </div>
         </div>
+    </div>
+    <div class="bg_box grass_dog left_margin_20">
+        <p>Enter your email address for more information about how you can help
+            build this app and improve pet health.</p>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <input placeholder="email" type="text" name="email"/>
+            <button>&#10003;</button>
+        </form>
     </div>
 </div>
 <div class="grid_4">
     <div class="bg_box buddy">
         <div class="bg_label">Buddy</div>
     </div>
+    <div class="bg_box phone_logo">
+        <ul class="social">
+            <li><a href="https://www.facebook.com/Vet24Seven">fb</a></li>
+            <li><a href="https://twitter.com/Vet24Seven">tw</a></li>
+            <li><a href="#">follow us</a></li>
+            <li><a href="#">like us</a></li>
+        </ul>
+    </div>
 </div>
-<div class="grid_4 movie">
-    <h3 class="text-red">Hot News</h3>
-    <p>RESCUED!! Dog abandoned and living in a field for 5 months (watch below)</p>
-    <iframe width="250" height="150" src="http://www.youtube.com/embed/6lVgjUNxVik" frameborder="0" allowfullscreen></iframe>
+<div class="grid_4">
+    <div class="bg_box movie right_margin_20">
+        <h3 class="text-red">Hot News</h3>
+        <p>RESCUED!! Dog abandoned and living in a field for 5 months (watch below)</p>
+        <iframe width="250" height="150" src="http://www.youtube.com/embed/6lVgjUNxVik" frameborder="0" allowfullscreen></iframe>
+        <div class="bg_label"><div class="inner">KGET - Bakersfield News Story</div></div>
+    </div>
+    <div class="bg_box bg_blue right_margin_20">
+        <p class="text-white join_team">Follow Buddy's story by joining<br/>
+        <strong>Team Buddy</strong><br/>
+        &hellip;enter your email for updates</p>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <input placeholder="email" type="text" name="email"/>
+            <button>&#10003;</button>
+        </form>
+        <p class="small text-white">
+            We will not give away or sell your email. And we won&#8217;t send you an excessive
+            amount of emails either.<br/>
+            Promise.
+        </p>
+    </div>
 </div>
 {% endblock %}
