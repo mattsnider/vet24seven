@@ -16,6 +16,7 @@
 MANIFEST
 dist/
 build/
+static/
 
 # 3rd-party files
 .sass-cache

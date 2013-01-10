@@ -8,5 +8,6 @@ def shared_context(request):
     return {
         'main_grid': '',
         'page_grid': 'container_12',
+        'settings': settings,
         'sidebar_grid': '',
     }

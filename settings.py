@@ -120,7 +120,9 @@ SITE_ID = 1
 DEFAULT_FROM_EMAIL = 'Matt Snider <admin@mattsnider.com>'
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
-if vet24seven_settings['ENV'] == 'prod':
+STATIC_FILE_COMBINATIONS = {}
+
+if vet24seven_settings['ENV'] == 'dev':
     from settings_prod import *
 elif vet24seven_settings['ENV'] == 'dev':
     from settings_dev import *
@@ -131,13 +133,6 @@ try:
     from settings_local import *
 except Exception, e:
     logging.info('No settings_local.py, nothing overridden.')
-
-# remove some stuff from test
-if not IS_TEST:
-    MIDDLEWARE_CLASSES.append('django.middleware.csrf.CsrfViewMiddleware')
-
-
-# Test overrides:
 
 if IS_TEST:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -151,3 +146,6 @@ if IS_TEST:
     except NameError:
         if not IS_DEV:
             raise
+else:
+    # remove some stuff from test
+    MIDDLEWARE_CLASSES.append('django.middleware.csrf.CsrfViewMiddleware')

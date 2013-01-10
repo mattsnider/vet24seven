@@ -165,6 +165,23 @@ form {
   height: 302px;
 }
 
+.two_phones {
+  background: black url("../image/phones.png") 400px 20px no-repeat;
+  color: white;
+  height: auto;
+  margin: 40px auto 0;
+  padding: 60px 60px;
+  width: 480px;
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    font-size: 13pt;
+  }
+}
+
 .left_margin_20 {
   margin-left: 20px;
 }
@@ -230,6 +247,27 @@ form {
     padding: 5px;
     width: 160px;
   }
+}
+
+.benefit {
+  margin: 15px 20px 0 60px;
+
+  strong {
+    font-size: 11pt;
+  }
+}
+
+.benefit_final {
+  margin-left: auto;
+  margin-right: auto;
+  width: 380px;
+}
+
+h5.grid_12 {
+  font-size: 14pt;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+  text-align: center;
 }
 
 .text-blue {

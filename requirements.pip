@@ -1,7 +1,11 @@
 Django
 Fabric
-python-memcached
+
+boto
+django-compressor
 psycopg2
+python-memcached
 south
+yuicompressor
 
 git+https://github.com/mattsnider/django-shared.git
