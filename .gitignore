@@ -16,7 +16,7 @@
 MANIFEST
 dist/
 build/
-static/
+/static/
 settings_local.py
 settings_overrides.py
 
