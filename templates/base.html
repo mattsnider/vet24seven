@@ -1,5 +1,14 @@
 {% extends 'django_shared/base.html' %}
 {% block title %}Vet 24 seven{% endblock %}
+{% block description %}Bringing vets to your pets. We love our pets and we love  technology. Vet24Seven revolutionizes pet healthcare by bringing vets to your pets via the Vet24Seven app and your mobile device.{% endblock %}
+
+{% block extra_head %}
+    <meta property="og:title" content="Vet24Seven" />
+    <meta property="og:description" content="Bringing vets to your pets. We love our pets and we love  technology. Vet24Seven revolutionizes pet healthcare by bringing vets to your pets via the Vet24Seven app and your mobile device." />
+    <meta property="og:image" content="http://cache.nebula.phx3.secureserver.net/obj/Q0E3MzdFRDlEMTlDQjMwOTA1Mzc6OTMxYmIyNmUwNzNhMTE5ZWVjYzEwYTA3YjNjM2JlMDE=" />
+    <link rel="image_src" href="http://cache.nebula.phx3.secureserver.net/obj/Q0E3MzdFRDlEMTlDQjMwOTA1Mzc6OTMxYmIyNmUwNzNhMTE5ZWVjYzEwYTA3YjNjM2JlMDE=" />
+{% endblock %}
+
 {% block keywords %}{{ keywords|default:'vet,veterinarian,24,twenty,four,twentyfour,twenty-four,seven,7,mobile,pets,dogs,cat' }}{% endblock %}
 {% block extra_styles %}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/libs/grid_960/960_12_col.css" />

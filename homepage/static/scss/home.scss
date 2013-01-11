@@ -150,16 +150,33 @@ form {
 }
 
 .phone_logo {
-  background: transparent url("../image/phone_logo.jpeg") 130px 30px no-repeat;
+  background: transparent url("../image/phone_logo.jpeg") 150px 30px no-repeat;
 
   ul.social {
     margin: 0;
-    padding-left: 20px;
-    padding-top: 100px;
+    padding-left: 15px;
+    padding-top: 90px;
+
+    .icon {
+      background: transparent url("../image/SocialButtons.jpg") 0 0 no-repeat;
+      display: block;
+      height: 35px;
+      text-indent: -9999px;
+      width: 35px;
+    }
+
+    .facebook .icon {
+      background-position: -225px -2px;
+    }
+
+    .twitter .icon {
+      background-position: -225px -39px;
+    }
 
     li {
       display: block;
       list-style: none;
+      padding-bottom: 5px;
     }
   }
 }
@@ -284,6 +301,14 @@ h5.grid_12 {
   .on {
     display: none;
   }
+}
+
+.clear {
+  clear: both;
+}
+
+.float-left {
+  float: left;
 }
 
 .text-blue {
