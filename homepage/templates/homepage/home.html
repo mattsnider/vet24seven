@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load url from future %}
 
 {% block header %}
     <img alt="vet24seven logo" class="logo" src="{{ STATIC_URL }}image/V24S_logo.jpeg"/>
@@ -22,10 +23,18 @@
         <div class="bg_box grass_dog left_margin_20">
             <p>Enter your email address for more information about how you can help
                 build this app and improve pet health.</p>
-            <form action="#" method="POST">
+            <form action="{% url 'email' %}" method="POST">
                 {% csrf_token %}
+                {% for field in vet24seven_form %}
+                    {% if field.name != 'email' %}
+                        {{ field.as_hidden }}
+                    {% endif %}
+                {% endfor %}
                 <input placeholder="email" type="text" name="email"/>
-                <button>&#10003;</button>
+                <button class="on">
+                    <var class="on">&#187;</var>
+                    <var class="off">&#10003;</var>
+                </button>
             </form>
         </div>
     </div>
@@ -53,10 +62,18 @@
             <p class="text-white join_team">Follow Buddy's story by joining<br/>
             <strong>Team Buddy</strong><br/>
             &hellip;enter your email for updates</p>
-            <form action="#" method="POST">
+            <form action="{% url 'email' %}" method="POST">
                 {% csrf_token %}
+                {% for field in buddy_form %}
+                    {% if field.name != 'email' %}
+                        {{ field.as_hidden }}
+                    {% endif %}
+                {% endfor %}
                 <input placeholder="email" type="text" name="email"/>
-                <button>&#10003;</button>
+                <button class="on">
+                    <var class="on">&#187;</var>
+                    <var class="off">&#10003;</var>
+                </button>
             </form>
             <p class="small text-white">
                 We will not give away or sell your email. And we won&#8217;t send you an excessive

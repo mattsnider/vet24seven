@@ -24,6 +24,10 @@ p {
 
 .l_footer {
   border: none;
+
+  p {
+    text-align: left;
+  }
 }
 
 .logo {
@@ -166,7 +170,7 @@ form {
 }
 
 .two_phones {
-  background: black url("../image/phones.png") 400px 20px no-repeat;
+  background: black url("../image/phones.png") 440px 20px no-repeat;
   color: white;
   height: auto;
   margin: 40px auto 0;
@@ -268,6 +272,18 @@ h5.grid_12 {
   font-weight: normal;
   margin-bottom: 0.5em;
   text-align: center;
+}
+
+.on {
+  .off {
+    display: none;
+  }
+}
+
+.off {
+  .on {
+    display: none;
+  }
 }
 
 .text-blue {

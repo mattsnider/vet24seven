@@ -20,11 +20,12 @@ urlpatterns = patterns('',
 #    (r'^/', include('diablo.urls', namespace='diablo')),
 
     # error pages
-    (r'^404/$', 'common.views.page_not_found'),
-    (r'^500/$', 'common.views.server_error'),
+#    (r'^404/$', 'common.views.page_not_found'),
+#    (r'^500/$', 'common.views.server_error'),
 )
 
 urlpatterns += patterns('homepage.views',
+    url(r'^email/$', 'email', name='email'),
     url(r'^$', 'index', name='index'),
 )
 
