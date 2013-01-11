@@ -4,7 +4,7 @@ $color-pink: #AA3246;
 $color-blue: #1F3AB0;
 $color-blue-light: #1640E5;
 $color-blue-lightest: #3D6BB9;
-$pageFont: 'Calibri, sans-serif';
+$pageFont: 'sans-serif';
 
 body {
   font-family: $pageFont;
@@ -67,7 +67,7 @@ p {
 }
 
 .join_team {
-  padding: 40px 0 10px;
+  padding: 10px 0;
 
   strong {
     font-size: 12pt;
@@ -90,7 +90,7 @@ p {
 }
 
 .buddy {
-  background: transparent url("../image/Buddy_the_Dog.jpeg") 0 0 no-repeat;
+  background: transparent url("../image/Buddy_the_Dog.jpg") 0 0 no-repeat;
 }
 
 .bg_blue {
@@ -101,7 +101,17 @@ p {
   }
 
   .small {
-    padding: 30px 50px;
+    padding: 10px 50px;
+  }
+
+  blockquote {
+    margin: 0 auto;
+    padding: 1em 0;
+    width: 140px;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -110,12 +120,12 @@ p {
 }
 
 .grass_dog {
-  background: transparent url("../image/Dog_on_grass.jpeg") 0 0 no-repeat;
+  background: transparent url("../image/Dog_on_grass.png") 0 0 no-repeat;
 
   p {
     color: white;
     margin: 0;
-    padding: 40px 40px;
+    padding: 30px 40px;
   }
 
   form {
@@ -182,12 +192,12 @@ form {
 }
 
 .labradoodle {
-  background: transparent url("../image/Labradoodle.png") 145px 120px no-repeat;
+  background: transparent url("../image/Labradoodle.png") 130px 110px no-repeat;
   height: 302px;
 }
 
 .two_phones {
-  background: black url("../image/phones.png") 440px 20px no-repeat;
+  background: black url("../image/phones.png") 420px 20px no-repeat;
   color: white;
   height: auto;
   margin: 40px auto 0;
