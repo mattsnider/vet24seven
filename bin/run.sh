@@ -9,8 +9,7 @@ NUM_WORKERS=3
 USER=www-data
 GROUP=www-data
 
-source /usr/local/bin/virtualenvwrapper.sh
-workon vet24seven
+source /home/ubuntu//.virtualenvs/vet24seven/bin/activate
 cd /home/ubuntu/vet24seven
 test -d $LOGDIR || mkdir -p $LOGDIR
 exec gunicorn_django -w $NUM_WORKERS \

@@ -122,7 +122,7 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 STATIC_FILE_COMBINATIONS = {}
 
-if vet24seven_settings['ENV'] == 'dev':
+if vet24seven_settings['ENV'] == 'prod':
     from settings_prod import *
 elif vet24seven_settings['ENV'] == 'dev':
     from settings_dev import *
