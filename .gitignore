@@ -17,6 +17,8 @@ MANIFEST
 dist/
 build/
 static/
+settings_local.py
+settings_overrides.py
 
 # 3rd-party files
 .sass-cache

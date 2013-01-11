@@ -28,7 +28,7 @@ LANGUAGE_CODE = 'en-us'
 USE_I18N = False
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = vet24seven_settings['SECRET_KEY']
+SECRET_KEY = settings_local.SECRET_KEY
 
 # Temp directory
 TMP_DIR = os.path.join(ROOT_DIR,'tmp')
@@ -122,15 +122,15 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 STATIC_FILE_COMBINATIONS = {}
 
-if vet24seven_settings['ENV'] == 'prod':
+if settings_local.ENV == 'prod':
     from settings_prod import *
-elif vet24seven_settings['ENV'] == 'dev':
+elif settings_local.ENV == 'dev':
     from settings_dev import *
 else:
     logging.error('VET24SEVEN_SETTINGS does not define an env value.')
 
 try:
-    from settings_local import *
+    from settings_overrides import *
 except Exception, e:
     logging.info('No settings_local.py, nothing overridden.')
 

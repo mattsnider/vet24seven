@@ -1,5 +1,6 @@
 import os
 import sys
+import settings_local
 
 if sys.argv and len(sys.argv) > 1:
     IS_TEST = 'test' == sys.argv[1]
@@ -8,16 +9,11 @@ else:
 
 ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 
-vet24seven_settings = {}
-for kv in os.environ.get('VET24SEVEN_SETTINGS').split('&'):
-    a = kv.split('=')
-    vet24seven_settings[a[0]] = a[1]
-
 DB_ENGINE = 'django.db.backends.postgresql_psycopg2'
-DB_HOST = vet24seven_settings['DB_HOST']
-DB_NAME = vet24seven_settings['DB_NAME']
-DB_PASSWORD = vet24seven_settings['DB_PASSWORD']
-DB_USER = vet24seven_settings['DB_USER']
+DB_HOST = settings_local.DB_HOST
+DB_NAME = settings_local.DB_NAME
+DB_PASSWORD = settings_local.DB_PASSWORD
+DB_USER = settings_local.DB_USER
 
 LOGIN_URL = '/existing/'
 
@@ -27,9 +23,9 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 # AWS Settings
 ####
 
-AWS_ACCESS_KEY_ID = vet24seven_settings['AWS_ACCESS_KEY_ID']
-AWS_SECRET_ACCESS_KEY = vet24seven_settings['AWS_SECRET_ACCESS_KEY']
-AWS_STORAGE_BUCKET_NAME = vet24seven_settings['AWS_STORAGE_BUCKET_NAME']
+AWS_ACCESS_KEY_ID = settings_local.AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY = settings_local.AWS_SECRET_ACCESS_KEY
+AWS_STORAGE_BUCKET_NAME = settings_local.AWS_STORAGE_BUCKET_NAME
 AWS_BUCKET_URL = u'http://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
 AWS_QUERYSTRING_AUTH = False
 AWS_QUERYSTRING_EXPIRE = 31556926
