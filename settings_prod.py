@@ -19,3 +19,6 @@ STATIC_URL = u'%s/' % os.path.join(AWS_BUCKET_URL, u'static')
 ADMIN_MEDIA_PREFIX = u'%sadmin/' % STATIC_URL
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+GOOGLE_ANALYTICS_CODE = 'UA-37583521-1'
+GOOGLE_ANALYTICS_DOMAIN = 'vet24seven.com'
