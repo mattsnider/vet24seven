@@ -67,7 +67,7 @@ p {
 }
 
 .join_team {
-  padding: 10px 0;
+  padding: 0;
 
   strong {
     font-size: 12pt;
@@ -101,12 +101,12 @@ p {
   }
 
   .small {
-    padding: 10px 50px;
+    padding: 0 50px;
   }
 
   blockquote {
     margin: 0 auto;
-    padding: 1em 0;
+    padding: 0.5em 0;
     width: 140px;
 
     a {
@@ -229,7 +229,7 @@ form {
 
   p {
     font-size: 9pt;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
     padding-left: 10px;
   }
 
@@ -244,7 +244,7 @@ form {
 
     .inner {
       background-color: #96061E;
-      padding: 10px 0;
+      padding: 0;
       text-align: center;
     }
   }
