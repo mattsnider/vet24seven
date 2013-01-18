@@ -2,7 +2,7 @@ $color-red: #93041D;
 $color-red-dark: #97051E;
 $color-pink: #AA3246;
 $color-blue: #1F3AB0;
-$color-blue-light: #1640E5;
+$color-blue-light: rgba(22, 64, 255, .05);
 $color-blue-lightest: #3D6BB9;
 $pageFont: 'sans-serif';
 
@@ -20,6 +20,24 @@ p {
   border: none;
   height: 150px;
   padding-top: 10px;
+  position: relative;
+
+  form {
+    bottom: 10px;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+  }
+
+  label {
+    display: block;
+    font-weight: normal;
+    line-height: 1em;
+  }
+
+  input {
+    width: 265px;
+  }
 }
 
 .l_footer {
@@ -93,25 +111,14 @@ p {
   background: transparent url("../image/Buddy_the_Dog.jpg") 0 0 no-repeat;
 }
 
-.bg_blue {
-  background-color: $color-blue-light;
+.donate {
+  padding: 0.5em 0;
 
-  p {
-    text-align: center;
-  }
-
-  .small {
-    padding: 0 50px;
-  }
-
-  blockquote {
+  a {
+    display: block;
     margin: 0 auto;
-    padding: 0.5em 0;
-    width: 200px;
-
-    a {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
+    width: 210px;
   }
 }
 
@@ -159,36 +166,42 @@ form {
   font-style: italic;
 }
 
-.phone_logo {
-  background: transparent url("../image/phone_logo.jpeg") 150px 30px no-repeat;
+ul.social {
+  height: 2em;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 10px;
 
-  ul.social {
-    margin: 0;
-    padding-left: 15px;
-    padding-top: 90px;
-
-    .icon {
-      background: transparent url("../image/SocialButtons.jpg") 0 0 no-repeat;
-      display: block;
-      height: 35px;
-      text-indent: -9999px;
-      width: 35px;
-    }
-
-    .facebook .icon {
-      background-position: -225px -2px;
-    }
-
-    .twitter .icon {
-      background-position: -225px -39px;
-    }
-
-    li {
-      display: block;
-      list-style: none;
-      padding-bottom: 5px;
-    }
+  iframe {
+    margin: 7px 5px;
   }
+
+  .icon {
+    background: transparent url("../image/SocialButtons.jpg") 0 0 no-repeat;
+    display: block;
+    height: 35px;
+    text-indent: -9999px;
+    width: 35px;
+  }
+
+  .facebook .icon {
+    background-position: -225px -2px;
+  }
+
+  .twitter .icon {
+    background-position: -225px -39px;
+  }
+
+  li {
+    display: block;
+    float: left;
+    list-style: none;
+  }
+}
+
+.phone_logo {
+  background: transparent url("../image/phone_logo.jpeg") 85px 50px no-repeat;
 }
 
 .labradoodle {
@@ -222,29 +235,32 @@ form {
 }
 
 .movie {
+  background-color: $color-blue-light;
+  height: 600px;
+
   h3 {
     margin: 0;
     padding-left: 10px;
   }
 
   p {
-    font-size: 9pt;
-    margin: 0 0 10px 0;
-    padding-left: 10px;
+    font-size: 11pt;
+    margin: 25px 15px;
   }
 
   iframe {
-    margin-left: 25px;
+    margin: 0 10px 25px;
   }
 
-  .bg_label {
+  .news_callout {
     background-color: #B20824;
-    padding: 8px 0 0;
+    padding: 0 0 8px;
     width: 100%;
 
-    .inner {
+    h3 {
       background-color: #96061E;
-      padding: 0;
+      color: white;
+      padding: 5px 0;
       text-align: center;
     }
   }
@@ -315,6 +331,10 @@ h5.grid_12 {
 
 .clear {
   clear: both;
+}
+
+.strong {
+  font-weight: bold;
 }
 
 .float-left {

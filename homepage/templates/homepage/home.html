@@ -4,7 +4,30 @@
 {% block header %}
     <img alt="vet24seven logo" class="logo" src="{{ STATIC_URL }}image/V24S_logo.jpeg"/>
     <h1 class="h_headline text-red">Bringing Vets to your Pets</h1>
+    <ul class="social">
+        <li class="facebook float-left"><a class="icon" href="https://www.facebook.com/Vet24Seven">facebook page</a></li>
+        <li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FVet24Seven&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=528385337190757" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></li>
+        <li class="twitter float-left"><a class="icon" href="https://twitter.com/Vet24Seven">twitter page</a></li>
+        <li>
+            <a href="https://twitter.com/vet24seven" class="twitter-follow-button" data-show-count="false">Follow @vet24seven</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </li>
+    </ul>
     <a class="link-back text-white" href="#">about the app</a>
+    <form action="{% url 'email' %}" method="POST">
+        {% csrf_token %}
+        {% for field in buddy_form %}
+            {% if field.name != 'email' %}
+                {{ field.as_hidden }}
+            {% endif %}
+        {% endfor %}
+        <label class="small" for="is-buddy-email">Join <strong>Team Buddy</strong> and follow his story!</label>
+        <input id="is-buddy-email" placeholder="email" type="text" name="email"/>
+        <button class="on">
+            <var class="on">&#187;</var>
+            <var class="off">&#10003;</var>
+        </button>
+    </form>
 {% endblock %}
 
 {% block main_content %}
@@ -43,49 +66,15 @@
             <div class="bg_label">Buddy</div>
         </div>
         <div class="bg_box phone_logo">
-            <ul class="social">
-                <li class="facebook float-left"><a class="icon" href="https://www.facebook.com/Vet24Seven">facebook page</a></li>
-                <li class="twitter float-left"><a class="icon" href="https://twitter.com/Vet24Seven">twitter page</a></li>
-                <li class="clear">&#160;</li>
-                <li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FVet24Seven&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=528385337190757" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></li>
-                <li>
-                    <a href="https://twitter.com/vet24seven" class="twitter-follow-button" data-show-count="false">Follow @vet24seven</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </li>
-            </ul>
+            <div class="donate"><a class="strong" href="http://annettepuskarich.chipin.com/buddy">Help Support Buddy (donate)!</a></div>
         </div>
     </div>
     <div class="grid_4">
-        <div class="bg_box movie right_margin_20" style="height: 420px">
-            <h3 class="text-red">Hot News</h3>
+        <div class="bg_box movie right_margin_20">
+            <div class="news_callout"><h3>KGET - Bakersfield News Story</h3></div>
             <p>RESCUED!! Dog abandoned and living in a field for 5 months (watch below)</p>
-            <iframe width="250" height="150" src="http://www.youtube.com/embed/17FFvaYdA2c?HD=1;rel=0;showinfo=0;controls=0" frameborder="0" allowfullscreen></iframe>
-            <iframe width="250" height="150" src="http://www.youtube.com/embed/6lVgjUNxVik?HD=1;rel=0;showinfo=0;controls=0" frameborder="0" allowfullscreen></iframe>
-            <div class="bg_label"><div class="inner">KGET - Bakersfield News Story</div></div>
-        </div>
-        <div class="bg_box bg_blue right_margin_20" style="height: 230px">
-            <blockquote><a class="text-white" href="http://annettepuskarich.chipin.com/buddy">Help Support Buddy (donate)!</a></blockquote>
-            <p class="text-white join_team">Follow Buddy's story by joining<br/>
-            <strong>Team Buddy</strong><br/>
-            &hellip;enter your email for updates</p>
-            <form action="{% url 'email' %}" method="POST">
-                {% csrf_token %}
-                {% for field in buddy_form %}
-                    {% if field.name != 'email' %}
-                        {{ field.as_hidden }}
-                    {% endif %}
-                {% endfor %}
-                <input placeholder="email" type="text" name="email"/>
-                <button class="on">
-                    <var class="on">&#187;</var>
-                    <var class="off">&#10003;</var>
-                </button>
-            </form>
-            <p class="small text-white">
-                We will not give away or sell your email. And we won&#8217;t send you an excessive
-                amount of emails either.<br/>
-                Promise.
-            </p>
+            <iframe width="280" height="173" src="http://www.youtube.com/embed/17FFvaYdA2c?HD=1;rel=0;showinfo=0;controls=0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="280" height="173" src="http://www.youtube.com/embed/6lVgjUNxVik?HD=1;rel=0;showinfo=0;controls=0" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
     <h5 class="grid_12 scroll_target">
