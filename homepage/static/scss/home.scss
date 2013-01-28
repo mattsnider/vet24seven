@@ -105,6 +105,15 @@ p {
     position: absolute;
     right: 0;
   }
+
+  .arrow {
+    background: transparent url("../image/arrow.png") 0 0 no-repeat;
+    position: absolute;
+    height: 149px;
+    left: 128px;
+    top: -69px;
+    width: 221px;
+  }
 }
 
 .buddy {

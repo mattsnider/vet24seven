@@ -11,7 +11,7 @@ CACHE_LENGTH_HOUR = 60 * 60
 CACHE_LENGTH_DAY = CACHE_LENGTH_HOUR * 24
 
 
-@cache_page(CACHE_LENGTH_DAY * 7)
+#@cache_page(CACHE_LENGTH_DAY * 7)
 def index(request):
     """
     Shows the homepage.
